@@ -1,22 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      10: Form to Google Sheets
-    </title>
-  </head>
-  <body>
 
-    <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec" method="POST">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    10: Form to Google Sheets
+  </title>
+</head>
 
-      <!--
+<body>
+
+  <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
+    method="POST">
+
+    <fieldset>
+      <legend>Contributor</legend>
+      <label>
+        <input type="hidden" name="contributor" value="Fanilo">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Artist_name</legend>
+      <label>
+        <input type="text" name="artist_name" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Artist_id</legend>
+      <label>
+        <input type="text" name="artist_id" pattern="belahy" required>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Genre<br></legend>
+      <label>
+        <select name="genre">
+          <optgroup name="malagasy_genres">
+            <option value="tsapiky">Tsapiky</option>
+            <option value="salegy">Salegy</option>
+            <option value="vocalist_music">Vocalist music</option>
+          </optgroup>
+          <optgroup>
+            <option value="r&b">R&B</option>
+            <option value="slow">Slow</option>
+            <option value="pop">Pop</option>
+          </optgroup>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Photo web address</legsend>
+        <label>
+          <input type="url" name="photo_url"
+            value="https://www.google.com/search?q=belahy&authuser=1&source=lnms&tbm=isch&sa=X&ved=2ahUKEwikrbr0zsvnAhVgAWMBHQcvCp4Q_AUoAnoECAgQBA&biw=1093&bih=500#imgrc=Yg1FLwcHyvLr1M">
+        </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Artist's biography</legend>
+      <label>
+        <input type="text" name="biography" value="Sorry, I couldn't more information about him.">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend> Website</legend>
+      <label>
+        <input type="url" name="website" value="https://web.facebook.com/belahy.vazomiteny?_rdc=1&_rdr">
+      </label>
+    </fieldset>
+    <!--
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
       -->
-
+    <div>
       <button type="submit">Save</button>
-    </form>
-  </body>
+    </div>
+  </form>
+</body>
+
 </html>
