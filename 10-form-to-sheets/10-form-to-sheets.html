@@ -14,66 +14,66 @@
   <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
     method="POST">
 
-    <fieldset>
-      <legend>Contributor</legend>
+    <p>
+      Contributor<br>
       <label>
         <input type="hidden" name="contributor" value="Fanilo">
       </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend>Artist_name</legend>
+    <p>
+      Artist_name<br>
       <label>
         <input type="text" name="artist_name" required>
       </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend>Artist_id</legend>
+    <p>
+      Artist_id<br>
       <label>
-        <input type="text" name="artist_id" pattern="belahy" required>
+        <input type="text" name="artist_id" pattern="[a-z-]" required>
       </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend>Genre<br></legend>
+    <p>
+      Genre<br>
       <label>
         <select name="genre">
-          <optgroup name="malagasy_genres">
+          <optgroup label="malagasy_genres">
             <option value="tsapiky">Tsapiky</option>
             <option value="salegy">Salegy</option>
             <option value="vocalist_music">Vocalist music</option>
           </optgroup>
-          <optgroup>
+          <optgroup label="international_genres">
             <option value="r&b">R&B</option>
             <option value="slow">Slow</option>
             <option value="pop">Pop</option>
           </optgroup>
         </select>
       </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend>Photo web address</legsend>
+    <p>
+      Photo web address<br>
         <label>
           <input type="url" name="photo_url"
             value="https://www.google.com/search?q=belahy&authuser=1&source=lnms&tbm=isch&sa=X&ved=2ahUKEwikrbr0zsvnAhVgAWMBHQcvCp4Q_AUoAnoECAgQBA&biw=1093&bih=500#imgrc=Yg1FLwcHyvLr1M">
         </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend>Artist's biography</legend>
+    <p>
+      Artist's biography<br>
       <label>
         <input type="text" name="biography" value="Sorry, I couldn't more information about him.">
       </label>
-    </fieldset>
+    </p>
 
-    <fieldset>
-      <legend> Website</legend>
+    <p>
+      Website<br>
       <label>
         <input type="url" name="website" value="https://web.facebook.com/belahy.vazomiteny?_rdc=1&_rdr">
       </label>
-    </fieldset>
+    </p>
     <!--
         The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
         Create a field for each cell in the Google Sheet.
