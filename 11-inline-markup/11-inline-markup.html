@@ -20,14 +20,14 @@
 
     <!-- In this example, the 'Wait!' needs stressing when vocalised -->
     <p>
-      "<em>Wait</em>!" shouted Jesse.
+      <q><em>Wait</em>!</q> shouted Jesse.
     </p>
 
     <hr>
 
     <!-- It's a good idea to tell a computer how to read a datetime: -->
     <p>
-      The time is <time datetime="2020-02-12 14:00">on Wednesay.</time>
+      The time is now <time datetime="2020-02-12T14:00:00+03:00">2pm, on Wednesay.</time>
     </p>
 
     <hr>
@@ -44,11 +44,11 @@
     <p>
       Editor's Notes:<br>
 
-      Please use CTRL+B to bold this word: Critical<br>
+      Please use <kbd>CTRL</kbd>+<kbd>B</kbd> to bold this word: Critical<br>
     </p>
     <p><b>Critical</b><br></p>
     <p>
-      Please use CTRL+I to italicise this word: Doubtful<br>
+      Please use <kbd>CTRL</kbd>+<kbd>I</kbd> to italicise this word: Doubtful<br>
     </p>
     <p><i>Doubtful</i><br></p>
 
@@ -71,29 +71,30 @@
 
       <!-- We can do the same with samples of code, even maintaining the whitespace: -->
       <p>
-        "Woah! '<kbd>that</kbd>' was unexpected!" exclaimed Keith.<br>
+        <q><em>Woah!</em> <code>'that'</code> was unexpected!</q> exclaimed Keith.<br>
         Curiously, Jesse looked at the output on Keith's screen and it said:<br>
-      </p>
+
       <!--I don't really understand this question-->
-      <p>
-        Unexpected value for argument 'that'
-        - in function clickHandler, line 12
-        - called from function anonymous, line 34
+<pre>
+Unexpected value for argument <code>'that'</code>
+ - in function <code>clickHandler</code>, line 1
+ - called from function anonymous, line 34
+</pre>
       </p>
 
-      <hr>
+    <hr>
 
-      <!-- We can add helpful markup to highlight words -->
-      <p>
-        Your search term: '<mark>Helicopter</mark>' was found in the following documents:
-      </p>
+    <!-- We can add helpful markup to highlight words -->
+    <p>
+      Your search term: '<mark>Helicopter</mark>' was found in the following documents:
+    </p>
 
-      <ul>
-        <li>
-          <a href="#bell-222">Bell 222</a>:<br>
-          The Model 222 is a <mark>helicopter</mark> made by the Bell Helicopter Corporation.
-        </li>
-      </ul>
+    <ul>
+      <li>
+        <a href="#bell-222">Bell 222</a>:<br>
+        The Model 222 is a <mark>helicopter</mark> made by the Bell <mark>Helicopter</mark> Corporation.
+      </li>
+    </ul>
 
   </main>
 </body>
