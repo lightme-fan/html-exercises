@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -7,120 +8,206 @@
       13: Semantic HTML
     </title>
   </head>
+
   <body>
     <header>
       <h1>
         Semantic HTML
       </h1>
     </header>
-    <main>
 
+    <main>
       <section>
         <h2>A menu of a list of links</h2>
-        <!--
-          1. Create a list of links to form a navigational element. The links are:
-            - "Home" links to "/"
-            - "Our services" links to "/services"
-            - "About us" links to "/about"
-            - "Contact us" links to "/contact"
-        -->
+
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+
+            <li>
+              <a href="/services">Services</a>
+            </li>
+
+            <li>
+              <a href="/about">Aout us</a>
+            </li>
+
+            <li>
+              <a href="/contact">Contact us</a>
+            </li>
+          </ul>
+        </nav>
       </section>
 
       <section>
         <h2>A profile update form</h2>
-        <!--
-          2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
 
-          The user's:
-            - First name and Family name, to be saved as "profile_first_name" and "profile_family_name" respectively. This is required.
-            - Email, mandatory, to be saved as "username".
-            - Phone number, optional, to be saved as "phone".
-            - Gender, optional, as "gender", with the following choices:
-              - Male, as "m"
-              - Female, as "f"
-              - Prefer to not disclose, "na"
-            - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
-        -->
+        <p>
+          <label>First name<br>
+            <input type="text" name="profile_first_name" value="username" required>
+          </label>
+        </p>
+
+        <p>
+          <label>Family name<br>
+            <input type="text" name="profile_family_name" value="username" required>
+          </label>
+        </p>
+
+        <p>
+          <label>E-mail<br>
+            <input type="email" name="username" required>
+          </label>
+        </p>
+
+        <p>
+          <label>Phone number<br>
+            <input type="tel" name="phone" value="phone">
+          </label>
+        </p>
+
+        <div>Gender</div>
+
+        <nav>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="gender" value="m" required>
+                Male
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="radio" name="gender" value="f" required>
+              Female
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="radio" name="gender" value="na" required>
+                Prefer to not disclose
+              </label>
+            </li>
+          </ul>
+        </nav>
+        <p>
+          <label for="photo">Photo<br>
+            <input type="file" id="photo" name=profile_photo accept="image/png, image/jpeg, image/webp">
+          </label>
+        </p>
+
+        <div>
+          <button type="submit">Save</button>
+        </div>
       </section>
 
       <section>
         <h2>An excerpt</h2>
-        <!--
-          3. This excerpt is from a short story called "The story of your life" by "Ted Chiang". Supply the attribution to the author and their title, then mark-up the following excerpt correctly:
+        <blockquote>
+          <h3>An excerpt from the story of live</h3>
+          <p>
+            <q>The only reason you had me was so you could get a maid you wouldn't have to pay, you'll say bitterly,
+            dragging the vacuum cleaner out of the closet</q>.
+          </p>
 
-          "The only reason you had me was so you could get a maid you wouldn't have to pay," you'll say bitterly, dragging the vacuum cleaner out of the closet.
+          <p>
+            <q>That's right!</q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around now,
+            and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
+          </p>
 
-          "That's right!" I'll say. "Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it."
-
-          "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
-        -->
+          <p>
+            <q>If you weren't my mother, this would be illegal,</q> you'll say, seething as you unwind the power cord
+            and plug it into the wall outlet.
+          </p>
+          <cite>From Ted Chiang</cite>
+        </blockquote>
       </section>
 
       <section>
         <h2>A table</h2>
-        <!--
-          4. We need a table, with the following column headers:
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" id="header_name">Name</th>
+              <th scope="col" id="header_age">Age</th>
+              <th scope="col" id="header_weight">Weight</th>
+              <th scope="col" id="header_height">Height</th>
+            </tr>
+          </thead>
 
-            - Name
-            - Age
-            - Weight
-            - Height
+          <tbody>
+            <tr>
+              <th headers="header_name" scope="row" id="row_Fred">Fred</th>
+              <td headers="row_Fred header_age">23</td>
+              <td headers="row_Fred header_weight">74kg</td>
+              <td headers="row_Fred header_height">182cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_Anne">Anne</th>
+              <td headers="row_Anne header_age">26</td>
+              <td headers="row_Anne header_weight">56kg</td>
+              <td headers="row_Anne header_height">173cm</td>
+            </tr>
+            <tr>
+              <th headers="header_name" scope="row" id="row_Judith">Judith</th>
+              <td headers="row_Judith header_age">19</td>
+              <td headers="row_Judith header_weight">51kg</td>
+              <td headers="row_Judith header_height">168cm</td>
+            </tr>
+          </tbody>
+        </table>
 
-          Then we need rows for each student, their details are as follows:
-
-            - Fred, 23, 74kg, 182cm
-            - Anne, 26, 56kg, 173cm
-            - Judith, 19, 51kg, 168cm
-
-          Please provide a summary of the student's information.
-        -->
       </section>
 
       <section>
         <h2>Search results</h2>
-        <!--
-          5. Create a search results page in this folder and link to it from here.
-
-          In this new page you create…
-
-          After a user has entered a search term, we need to display the results of the search back to the user, so that they can click through to the page(s) that match their search.
-
-          This page needs the following structure:
-
-            - A header that includes:
-              - the name of the page
-              - a summary of the number of results
-              - the entered search term.
-              - a link back to search again, at "/search"
-            - A list of page results that match the term, which should include:
-              - The page title
-              - A link to the page
-              - A summary of where the entered search term matches the page
-
-          Here is the entered search term: "critical thinking"
-
-          And here are the results, with their excerpts:
-
-            Title: "Wikipedia: Critical Thinking"
-            URL: https://en.wikipedia.org/wiki/Critical_thinking
-            Excerpt:
-              According to Ennis, “Critical thinking is the intellectually disciplined process of actively and skillfully conceptualizing, applying, analyzing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action.
-
-            Title: "Critical Thinking | SkillsYouNeed"
-            URL: https://www.skillsyouneed.com/learn/critical-thinking.html
-            Excerpt:
-              Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
-        -->
+        <p>
+          Critical thinking<br>
+          <a href="search_result.html">Search results</a>
+        </p>
       </section>
+
       <section>
         <h2>A definition</h2>
-        <!--
-          6. Create the HTML necessary for the image `markup.png` in this folder.
-          It is a definition of the word 'Markup'.
-        -->
-        <img src="markup.png" alt="There are three definitions for the word 'Markup'">
-      </section>
+        <header>
+          <img src="markup.png" alt="There are three definitions for the word 'Markup'">
+        </header>
 
+        <h2>markup</h2><br>
+        <p>/ˈmɑːkʌp/</p>
+
+        <p>
+          <i>noun</i><br>
+          noun: <b>markup</b>; plural noun:
+          <b>markups</b>; noun: <b>mark-up</b>;
+          plural noun: <b>mark-ups</b>
+        </p>
+
+        <nav>
+          <ol>
+            <li>
+              <b>the amount added to the cost price of goods to cover overtheads and profit</b><br>
+              <q>a markup of 50 per cent</q>
+            </li>
+
+            <li>
+              the process or result of correcting text in preparation for printing.
+            </li>
+
+            <li>
+              <span>COMPUTING</span><br>
+              <b>a set of tags assigned to elements of a text to indicate their relation to the rest of the text or
+                dictate how they should be displayed.</b><br>
+              <q>markup languages</q>
+            </li>
+          </ol>
+        </nav>
+      </section>
     </main>
   </body>
+
 </html>
