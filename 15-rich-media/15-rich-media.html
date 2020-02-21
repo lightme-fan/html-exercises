@@ -6,8 +6,8 @@
     <title>
       15: Rich Media
     </title>
-    <!-- There's some CSS we need to include here -->
   </head>
+
   <body>
     <header>
       <h1>
@@ -19,20 +19,64 @@
         <header>
           <h2>Audio</h2>
         </header>
-        <!-- Add the audio example here -->
+        <figure>
+          <p>Listen to the high wails:</p>
+          <audio controls
+            src="audio/early-high_wails.ogg">
+              Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+
+          <p>Listen to the high wails long:</p>
+          <audio controls
+            src="audio/late-high_wails-long.ogg">
+              Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+
+          <p>Listen to the late high wails:</p>
+          <audio controls
+            src="audio/late-high_wails.ogg">
+              Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+
+          <p>Listen to the moan:</p>
+          <audio controls
+            src="audio/moan.ogg">
+              Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+
+          <p>Listen to the purr:</p>
+          <audio controls
+            src="audio/purr.ogg">
+              Your browser does not support the
+            <code>audio</code> element.
+          </audio>
+        </figure>
       </article>
+
       <article>
         <header>
           <h2>Video</h2>
         </header>
-        <!-- Add the video example here -->
+        <video controls width="500" height="400">
+          <source src="video/chip.mp4" type="video/mp4">
+          Sorry, your browser doesn't support embedded videos.
+        </video>
       </article>
+
       <article>
         <header>
           <h2>Canvas</h2>
+          <link rel="stylesheet" href="rich-media.css">
         </header>
-        <!-- Add the canvas example here -->
+        <canvas id="canvas" width="300" height="200" style="border:1px solid #000000;">
+        </canvas>
+        <script src="js/canvas.js"></script>
       </article>
+
     </main>
     <!-- For the canvas to work, we'll need the script included here -->
   </body>
